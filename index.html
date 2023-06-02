@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Game-Central</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg" href="Icons/SVG/favicon.svg">
+
+    <!-- this needs to be in its own JS script but its just for pressing Enter instead os pressing Search lazy ik that humans for ya -->
+    <script>
+        function handleKeyPress(event) {
+            if (event.keyCode === 13) { // 13 is the code for Enter key
+                event.preventDefault(); // Prevent form submission
+                document.getElementById("searchBtn").click(); // Simulate click on the search button
+                document.getElementById("searchInput").blur(); // Remove focus from the search input
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" title="Return to Home"><img src="Images/Game-Central_Logo.png" height="130px"></a>
+        </div>
+        <h1><a href="index.html" title="Explore Home">Welcome to Game-Central</a></h1>
+        <div class="search-box">
+            <input type="text" id="searchInput" title="Search Games" placeholder="Search...."
+                onkeypress="handleKeyPress(event)">
+            <button type="submit" id="searchBtn" title="Press to search">Search</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="External/Games.html" title="Explore Games">Games</a></li>
+                <li><a href="External/About.html">About</a></li>
+                <li><a href="External/Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <section id="home">
+            <h2><a href="#home">Home</a></h2>
+            <p>Welcome to my website! Explore and enjoy my Indie Unity games.</p>
+        </section>
+
+        <section id="games">
+            <h2><a href="External/Games.html">Games</a></h2>
+
+            <!-- Game Box #1 (ZomBites) -->
+            <div class="game-box">
+                <div class="game-info">
+                    <h3>ZomBites</h3>
+                    <div class="game-description">
+                        <p>Blood-Curling, FPS zombie game, survive the dead and loot up to make living in an apocalypse
+                            slightly easier.</p>
+                        <a href="External/Zombites.html" target="_blank">Play ZomBites</a>
+                    </div>
+                </div>
+                <div class="game-image">
+                    <img src="Images/Temp_Image.png" alt="ZomBites Image" height="150px">
+                </div>
+            </div>
+
+            <!-- Game Box #2 (Cube World) -->
+            <div class="game-box">
+                <div class="game-info">
+                    <h3>Cube World</h3>
+                    <div class="game-description">
+                        <p>Knock off Minecraft.</p>
+                        <a href="External/Cube_World.html" target="_blank">Play Cube World</a>
+                    </div>
+                </div>
+                <div class="game-image">
+                    <img src="Images/Temp_Image.png" alt="ZomBites Image" height="150px">
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2><a href="External/About.html">About</a></h2>
+            <p>Learn more about me and my passion for game development and my journey on becoming a game developer.</p>
+        </section>
+
+        <section id="contact">
+            <h2><a href="External/Contact.html">Contact</a></h2>
+            <p>Feel free to reach out to me for any inquiries or feedback.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Game Website. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
